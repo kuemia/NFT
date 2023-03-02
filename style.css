@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2? family= Roupa:wght@300;400;700 & family= Poppins:wght@300;500;800 & family= Justo & family= Sarala:wght@400;700 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 18 px;
+    font-weight: 300;
+}
+
+body {
+    font-family: 'Roupa', sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    background-color: var(--main-BG);
+    color: hsl(0, 0%, 60%);
+    padding: 1.25rem;
+    color: var(--Soft-blue);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 21.875rem;
+    width: 100%;
+    margin: 1.25rem;
+    padding: 1.5rem;
+    border-radius: 0.938rem;
+    background-color: var(--card-BG);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card .main-image {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    caret-color: transparent;
+    font-size: 0;
+  }
+
+.card .main-image .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    background-color: hsl(178, 100%, 50%, 60%);
+}
+
+.card .main-image:hover .overlay {
+    opacity: 1;
+}
+
+.card .main-image .overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: (-50%, -50%);
+    text-align: center;
+}
+
+.card-content h2 {
+    color: var(--white);
+    padding-top: 1rem;
+}
+
+.card-content p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-content ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.card-content ul li {
+    margin: 0px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.card-content ul li:first-child {
+    color: var(--Cyan);
+}
+
+.avatar  {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.avatar img {
+    width: 2.188rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.avatar span:hover {
+    color: var(--Cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
